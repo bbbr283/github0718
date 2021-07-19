@@ -37,6 +37,9 @@ header{
     transform:translateY(6px);
     color: wheat;
 }
+
+
+/* =========Eric======== */
 .txt-box{
     text-align: center;
     padding-bottom: 30px; 
@@ -45,6 +48,7 @@ header{
     color:white;
     font-size: 200px;
     font-weight: 900;
+    line-height: 2;
 }
 .txt-box h6{
     color:white;
@@ -69,6 +73,8 @@ header{
     margin: auto;
     
 }
+
+
 .circle{
     position: fixed;
     right: 20px;
@@ -84,38 +90,45 @@ header{
     margin: 10px 0px;
    
 }
-
+/* ===========自我介紹 */
 .myself-all{
     width: 100%;
     height: 600px;
-    background-color: aqua;
+    background: #F4F4F4;
 }
 .myself-all .myself{
     width: 1200px;
     height: 600px;
-    margin: auto;
-    background-color: blue;
+    margin: 0 auto;
+    display: block;
+    
 }
 .myself h1{
-    padding: 20px;
+
+    padding: 30px;
     text-align: center;
-    font-size: 48px;
+    font-size: 40px;
 }
 .myself img{
     width: 40%;
     float: left;
+    margin: 20px;
 }
 .myself .myself-txt{
     width:100%;
+    padding: 20px;
     height: 400px;
-    background-color: #333;
-   
     box-sizing: border-box;   
 }
+
 .myself-txt p{
-    padding:  0 80px;
+    text-indent: 34px;
+    margin: 20px;
+    padding: 0 20px;
     text-align: center;
-    color: white;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.5;
 }
 /* ＝＝＝＝＝＝＝＝＝＝＝＝經驗＝＝＝＝＝＝＝＝＝＝ */
 
@@ -264,7 +277,7 @@ height: 110px;
 }
 .pro-wrap .pro-item{
     width: 32.5%;
-    height: 200px;
+    height: 230px;
     background-color: blue;
     box-sizing: border-box;
     margin:5px;
@@ -275,6 +288,7 @@ height: 110px;
 }
 .pro-wrap .pro-item img{
     width: 100%;
+    height: 230px;
 }
 /* ========聯繫＝＝＝＝＝＝ */
 .FindMe{
