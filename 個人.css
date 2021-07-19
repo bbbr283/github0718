@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.clear{
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color:#333;
+    height: 600px;
+}
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+.nav-item{
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+   
+    background-color: #333;
+}
+.nav-item a{
+    color: white;
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 22px;
+}
+.nav-item a:hover{
+    transform:translateY(6px);
+    color: wheat;
+}
+.txt-box{
+    text-align: center;
+    padding-bottom: 30px; 
+}
+.txt-box p{
+    color:white;
+    font-size: 200px;
+    font-weight: 900;
+}
+.txt-box h6{
+    color:white;
+    font-size: 18px;
+    display: block;
+    margin-top: -55px;
+}
+.fa-chevron-up{
+        color: wheat;
+       
+        position: fixed;
+        font-size: 50px;
+        right: 20px;
+        bottom: 0px;
+}
+.fa-angle-double-down{
+    display: block;
+   padding-top: 80px;
+    color:white;
+    font-size: 80px;
+    width: 80px;
+    margin: auto;
+    
+}
+.circle{
+    position: fixed;
+    right: 20px;
+    top: 30%;
+}
+.circle .circle-btn{
+    display: block;
+    border: #333 2px solid;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    margin: 10px 0px;
+   
+}
+
+.myself-all{
+    width: 100%;
+    height: 600px;
+    background-color: aqua;
+}
+.myself-all .myself{
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    background-color: blue;
+}
+.myself h1{
+    padding: 20px;
+    text-align: center;
+    font-size: 48px;
+}
+.myself img{
+    width: 40%;
+    float: left;
+}
+.myself .myself-txt{
+    width:100%;
+    height: 400px;
+    background-color: #333;
+   
+    box-sizing: border-box;   
+}
+.myself-txt p{
+    padding:  0 80px;
+    text-align: center;
+    color: white;
+}
+/* ＝＝＝＝＝＝＝＝＝＝＝＝經驗＝＝＝＝＝＝＝＝＝＝ */
+
+.exp{
+    width: 100%;
+    background-color: white;
+}
+.exp h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 20px;
+}
+.exp .exp-imgbox{
+   width: 800px;
+    margin: auto;
+}
+.exp img{
+    width: 100%;
+}
+
+/* ===============技能＝＝＝ */
+.skillh1{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    background-color: #333;
+    padding: 20px 0;
+    
+   
+}
+.skill{
+    background-color: #333;
+    width: 100%;
+    height: 500px;
+}
+.skill-width{
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.skill-flex{
+    display: flex;
+    
+}
+.skill .energy{
+    width: 40px;
+    height: 120px;
+    margin-top: 10px;
+    border: white 3px solid;
+    background-color: rgb(36, 150, 116);
+    margin: 20px 0;
+}
+.skill .energy1{
+    height: 35%;
+    background-color:#333;
+  
+    /* padding-top: 50px; */
+}
+.skill .energy2{
+    height: 50%;
+    background-color:#333;
+    /* padding-top: 50px; */
+}
+.skill .energy3{
+    height: 70%;
+    background-color:#333;
+    /* padding-top: 50px; */
+}
+.skill .energy4{
+    height: 60%;
+    background-color:#333;
+    /* padding-top: 50px; */
+}
+.skill .energy5{
+    height: 80%;
+    background-color:#333;
+    /* padding-top: 50px; */
+}
+
+.skill-img{
+    margin-top: 30px;
+    margin-right: 15px;
+  
+}
+.skill .skill-img1{
+    width: 60px;
+    height: 100px;
+    transform: rotate(-30deg);
+    
+}
+.skill .skill-img2{
+    width: 60px;
+    height: 100px;
+    transform: rotate(30deg) translateX(-10px) translateY(10px);
+    
+}
+.skill-img3{
+width: 90px;
+height: 100px;
+}
+.skill-img4{
+    width: 100px;
+height: 110px;
+}
+.skill-img5{
+    width: 100px;
+    height: 110px;
+}
+.skill-img6{
+   width: 150px;
+   height: 50%;
+}
+
+/* 
+========案子＝＝＝＝＝ */
+.Portfolios{
+    width: 100%;
+    height: 500px;
+    background-color:#539fd6;;
+}
+.Portfolios .pro-wrap{
+    width: 1200px;
+    height:500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+}
+.pro-wrap .pro-txt{
+    width: 100%;
+    color: #000;
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0px;
+    position: relative;
+    top:-40px;
+    display: inline-block;
+}
+.pro-wrap .pro-item{
+    width: 32.5%;
+    height: 200px;
+    background-color: blue;
+    box-sizing: border-box;
+    margin:5px;
+    align-items: center;
+}
+.pro-wrap .pro-item a{
+    display: block;
+}
+.pro-wrap .pro-item img{
+    width: 100%;
+}
+/* ========聯繫＝＝＝＝＝＝ */
+.FindMe{
+    background-color: #F7F7F7;
+    width: 100%;
+    height:480px;
+}
+.meWarp{
+    width: 1200px;
+    height: 480px;
+    
+    display: flex;
+    margin: auto;
+}
+.meWarp .me-item{
+    width: 50%;
+}
+.me-item1{
+   
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fa-map-marker-alt{
+    color: rgb(75, 121, 190);
+    font-size: 60px;
+    margin: 10px 0;
+}
+.icon{
+    display: inline-block;
+    font-size: 50px;
+    
+}
+.icon a:first-child{
+  
+    color: rgb(17, 187, 88);
+}
+.icon a:last-child{
+  
+    color: rgb(17, 34, 187);
+}
+.me-item1 h1{
+    line-height: 30px;
+    margin: 5px 0;
+}
+.me-item1 h3{
+    font-size: 22px;
+    color: #555;
+    margin: 5px 0;
+}
+.me-item1 p{
+    font-size: 16px;
+    line-height: 2;
+}
+
+.me-item2 iframe{
+    height: 480px;
+}
+footer{
+    background: #539fd6;
+    width: 100%;
+    text-align: center;
+    height: 60px;
+}
+footer p{
+    line-height: 60px;
+    font-size: 18px;
+}
