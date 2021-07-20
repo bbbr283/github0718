@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 1000px;
+            background-color: wheat;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+       
+        #app{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+            width: 800px;
+            border-radius: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+       .meuetxt{
+            background-color: white;
+           width:800px;
+           margin: auto;
+           border: rgb(6, 58, 100) 5px solid;
+           border-radius: 10px;
+           box-sizing: border-box;
+           margin-bottom: 10px;
+       } 
+       select{
+           border: none;
+           width: 120px;
+           height: 33px;
+           font-size: 22px;
+       }
+       #text{
+            width: 650px;
+            height: 30px;
+         
+            border: none;
+       }
+       
+       .menu{
+           padding: 0 20px;
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+           margin: 10px auto;
+           /* background-color: white; */
+       }
+       .menu-item{
+           width: 50%;
+           margin-bottom: 15px;
+       }
+       .number{
+           display: inline-block;
+           width: 32px;
+           text-align: center;
+           background-color: rgb(6, 58, 100);
+           border-radius: 2px 0px  0px  2px;
+           color: white;
+       }
+       .type{
+            display: inline-block;
+            background-color: rgb(233, 236, 7);
+            margin-left: -5px;
+            width: 90px;
+            border-radius: 0px 20px  20px  0px;
+            text-align: center;
+            
+       }
+       .title{
+           color: #333;
+           text-decoration: none;
+       }
+
+       .imgbox{
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          display: block;
+          
+       }
+       .imgbox img{
+       width: 150px;
+       }
+    </style>
+</head>
+<body>
+   
+<div id="app">
+    <h1>龜山美食記</h1>
+    <div class="meuetxt">
+        <form action="">
+            <select v-model='input.type' >
+                <option >全部</option>
+                <option >傳統小吃</option>
+                <option >精選便當</option>
+                <option >宵夜美食</option>
+                <option >經典飲品</option>
+            </select>
+            <input 
+            type="text"
+            id="text"
+            @keyup.enter="inputHandler"
+            v-model.trim='input.title'>
+        </form>
+    </div>
+    <div class="menu">
+        <div class="menu-item"v-for='(item,index) in titleMenu'>
+            <span class="number">{{index + 1}}</span>
+            <span class="type">{{item.type}}</span>
+            <a 
+            :href="item.link"
+            target="vue-iron"
+            class="title"
+            >
+            {{item.title}}
+            </a>
+        </div>  
+    </div>
+    <div class="imgbox">
+        <img  src="./img/vuejs-wide.png" alt="">
+    </div>
+</div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        let data={
+            menu:[
+                {type:'傳統小吃',title:'曹記傳統美食',link:'https://www.darren0322.com/blog/post/65337223'},
+                {type:'傳統小吃',title:'老王臭豆腐',link:'https://www.alberthsieh.com/3291/wang-stinky-tofu'},
+                {type:'傳統小吃',title:'豬肝麵',link:'https://www.alberthsieh.com/1837/anonymous-noodle-shop-guishan'},
+                {type:'傳統小吃',title:'鴻海產粥',link:'https://www.alberthsieh.com/3425/hungfreshseafood#more-3425'},
+                {type:'精選便當',title:'綸記燒腊',link:'https://www.alberthsieh.com/3300/lun-roast-poultry'},
+                {type:'精選便當',title:'巧口快餐店',link:'https://www.darren0322.com/blog/post/taoyuan-lunch'},
+                {type:'精選便當',title:'庶民食堂',link:'https://www.alberthsieh.com/2500/civilian3200086'},
+                {type:'精選便當',title:'飛米子',link:'https://www.alberthsieh.com/221/flying-yonago-guishan'},
+                {type:'宵夜美食',title:'滷一郎醬滷味',link:'https://www.facebook.com/%E6%BB%B7%E4%B8%80%E9%83%8E-192277900803735/'},
+                {type:'宵夜美食',title:'協力香雞排',link:'https://ifoodie.tw/restaurant/5873d2a62756dd4b7f640518-%E5%8D%94%E5%8A%9B%E9%A6%99%E9%9B%9E%E6%8E%92'},
+                {type:'宵夜美食',title:'隔壁老王',link:'https://almablog.com.tw/blog/post/156476'},
+                {type:'宵夜美食',title:'古早味大腸麵線',link:'https://shouyadog1213.pixnet.net/blog/post/338636795'},
+                {type:'經典飲品',title:'亭仔腳',link:'https://almablog.com.tw/blog/post/144459'},
+            ],
+            input:{
+                type:'全部',
+                title:''
+            }
+        }
+
+        new Vue({
+            el:'#app',
+            data:data,
+            computed:{
+                typeMenu(){
+                    if(this.input.type !=='全部'){
+                        return this.menu.filter(item =>{
+                            return item.type ===this.input.type
+                        })                      
+                    }else{
+                        return this.menu
+                    }
+                },
+                titleMenu(){
+                    if(this.input.title){
+                       return this.typeMenu.filter(item => {
+                           let content = item.title.toLowerCase();
+                           let keyword =this.input.title.toLowerCase();
+                           return content.indexOf(keyword) !==-1
+                          
+
+                       })
+                    }else{
+                        return this.typeMenu
+                    }
+                }
+            },
+            // methods:{
+            //     inputHandler(){
+                 
+            //         if(this.input.title){
+            //             this.menu.push({
+            //                 type:this.input.type,
+            //                 title:this.input.title,
+            //                 link:'#'
+            //             })
+            //         }else{
+            //             this.input.title=''
+            //         }
+            //     }
+            // }
+
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>
